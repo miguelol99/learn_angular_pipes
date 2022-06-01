@@ -1,0 +1,69 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p> Pipes incluidos en Angular - Usualmente en el Common Module</p>
+
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="uppercase" [subheader]="nombreUpper | uppercase">
+            {{nombreLower | uppercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="lowecase" [subheader]="nombreLower | lowercase">
+            {{nombreLower}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+            {{nombreCompleto | titlecase}}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p> Pipes para mostrar las fecha</p>
+
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card subheader="Pipe">
+            <ul class="list-group">
+                <li class="list-group-item">"fecha"</li>
+                <li class="list-group-item">"fecha | date"</li>
+                <li class="list-group-item">"fecha | date:'short'"</li>
+                <li class="list-group-item">"fecha | date:'long'</li>
+                <li class="list-group-item">"fecha | date:'dd/MM/YYYY, EEEE'"</li>
+            </ul>
+
+            <hr>
+
+            <ul class="list-group">
+                <li class="list-group-item">"fecha | date:'long':'GMT+3'"</li> 
+                <li class="list-group-item">"fecha | date:'long':'':'fr'"</li> 
+
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card subheader="Resultado">
+            <ul class="list-group">
+                <li class="list-group-item">{{fecha}}</li>
+                <li class="list-group-item">{{fecha | date}}</li>
+                <li class="list-group-item">{{fecha | date:'short'}}</li>
+                <li class="list-group-item">{{fecha | date:'long'}}</li>
+                <li class="list-group-item">{{fecha | date:'dd/MM/YYYY, EEEE'}}</li>
+            </ul>
+
+            <hr>
+
+            <ul class="list-group">
+                <li class="list-group-item">{{fecha | date:'long':'GMT+3'}}</li> 
+                <li class="list-group-item">{{fecha | date:'long':'':'fr'}}</li> 
+            </ul>
+        </p-card>
+    </div>
+</div>
