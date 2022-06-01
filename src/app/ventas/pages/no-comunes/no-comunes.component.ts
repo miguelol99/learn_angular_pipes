@@ -68,6 +68,11 @@ export class NoComunesComponent {
     this.clientes.pop()
   }
 
+  resetArray() {
+    let arr  = ['María', 'Pedro', 'Eduardo', 'Rodigro', 'Miguel']
+    this.clientes = arr
+  }
+
 
 
 }

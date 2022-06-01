@@ -6,21 +6,20 @@
 <div class="grid">
     
     <div class="col-4">
-        <p-card header="Ventas Netas" subheader="del año actual">
-            <i class="pi pi-dollar"></i>
-            {{ventasNetas | number:'.2-2'}}
+        <p-card header="Decimal Pipe" subheader="var | number:'.2-2'">
+            {{ventasNetas}}   <i class="pi pi-arrow-right"></i>   {{ventasNetas | number:'.2-2'}}
         </p-card>
     </div>
 
     <div class="col-4">
-        <p-card header="Ventas Brutas" subheader="del año actual">
-            {{ventasNetas + 2000000 | currency:'EUR':'symbol-narrow':'1.0-2'}}
+        <p-card header="Currency Pipe" subheader="var | currency:'EUR':'symbol-narrow':'1.0-2'">
+            {{ventasNetas + 23223222}} <i class="pi pi-arrow-right"></i> {{ventasNetas + 23223222 | currency:'EUR':'symbol-narrow':'1.0-2'}}
         </p-card>
     </div>
 
     <div class="col-4">
-        <p-card header="% de Ganancias" subheader="del año actual">
-            {{porcentaje | percent:'2.2'}}
+        <p-card header="Percent Pipe" subheader="var | percent:'2.2'">
+            {{porcentaje}} <i class="pi pi-arrow-right"></i> {{porcentaje | percent:'2.2'}}
         </p-card>
     </div>
 
